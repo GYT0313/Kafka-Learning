@@ -38,7 +38,7 @@ public class SendMessageAvro {
 				 "\"name\": \"Customer\", " + 
 				 "\"fields\": [{\"name\": \"id\", \"type\": \"int\"}, " + 
 				 "{\"name\": \"name\",  \"type\": \"string\"}, " +
-				 "{\"name\": \"email\", \"type\": [\"null\", \"string\"], \"default\": \"null\"}]}";
+				 "{\"name\": \"email\", \"type\": \"string\", \"default\": \"null\"}]}";
 		
 		@SuppressWarnings("resource")
 		Producer<String, GenericRecord> producer = new KafkaProducer<String, GenericRecord>(kafkaProps);
